@@ -69,7 +69,6 @@ recipe_names = list(recipes.keys())
 num_recipes = len(recipe_names)
 print(num_recipes)
 num_ingredients = len(all_ingredients)
-for ingredient in all_ingredients:
 
 recipe_matrix = np.zeros((num_recipes, num_ingredients))
 
