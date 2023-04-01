@@ -70,8 +70,7 @@ num_recipes = len(recipe_names)
 print(num_recipes)
 num_ingredients = len(all_ingredients)
 for ingredient in all_ingredients:
-  print(ingredient)
-print(num_ingredients)
+
 recipe_matrix = np.zeros((num_recipes, num_ingredients))
 
 ingredient_to_index = {ingredient: i for i, ingredient in enumerate(all_ingredients)}
@@ -81,7 +80,6 @@ for i, recipe_name in enumerate(recipe_names):
         j = ingredient_to_index[ingredient]
         recipe_matrix[i, j] = quantity
 
-print(recipe_matrix)
 
 # # Define the neural network
 model = Sequential()
