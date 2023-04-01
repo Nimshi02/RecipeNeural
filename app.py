@@ -11,7 +11,6 @@ from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import firestore
 from IPython.core.display import set_matplotlib_formats
-from sklearn.preprocessing import MinMaxScaler
 from flask import Flask, jsonify
 # #Load the database
 df=pd.read_json("ingredient_and_instructions.json")
@@ -82,8 +81,6 @@ for i, recipe_name in enumerate(recipe_names):
         j = ingredient_to_index[ingredient]
         recipe_matrix[i, j] = quantity
 
-scaler = MinMaxScaler()
-recipe_matrix = scaler.fit_transform(recipe_matrix)
 print(recipe_matrix)
 
 # # Define the neural network
