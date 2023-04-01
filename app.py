@@ -59,7 +59,6 @@ for items in df:
       new_recipe[new_ingredient] = new_amount
   recipes[itemName] = new_recipe
 
-print(recipes)
 all_ingredients = set()
 for recipe in recipes.values():
     all_ingredients.update(recipe.keys())
@@ -67,7 +66,6 @@ for recipe in recipes.values():
 #Create the numpy array of recipes
 recipe_names = list(recipes.keys())
 num_recipes = len(recipe_names)
-print(num_recipes)
 num_ingredients = len(all_ingredients)
 
 recipe_matrix = np.zeros((num_recipes, num_ingredients))
