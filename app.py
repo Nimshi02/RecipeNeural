@@ -1,7 +1,3 @@
-!pip install Flask
-!pip install firebase-admin
-
-
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
